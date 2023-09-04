@@ -41,9 +41,12 @@ export default {
       this.show = !this.show
     },
     changeBlock() {
-      if (this.ifElseDemo === 1) this.ifElseDemo = 2
-      else if (this.ifElseDemo === 2) this.ifElseDemo = 3
-      else this.ifElseDemo = 1
+      if (this.ifElseDemo === 1) 
+        this.ifElseDemo = 2;
+      else if (this.ifElseDemo === 2) 
+        this.ifElseDemo = 3;
+      else 
+        this.ifElseDemo = 1;
     },
   },
 }
