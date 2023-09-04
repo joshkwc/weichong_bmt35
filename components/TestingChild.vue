@@ -1,9 +1,8 @@
 <template>
   <div>
     <p>{{ fullName }}</p>
-    <!-- https://www.w3schools.com/charsets/ref_emoji_smileys.asp if interested on emoji -->
     <button @click="showHide">Click me to show/hide</button>
-    <p v-show="show">&#128518;</p>
+    <p v-show="show">Shown</p>
     <p>
       <button @click="changeBlock">Click me to change block</button>
     </p>
