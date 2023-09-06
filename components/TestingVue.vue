@@ -1,10 +1,8 @@
 <template>
-<!-- https://tailwindcss.com/docs/guides/nuxtjs -->
+  <!-- https://tailwindcss.com/docs/guides/nuxtjs -->
   <div>
-      <TestingChild
-        :first-name="firstName"
-        :last-name="lastName"
-      />
+    <!-- props, passing down of data, also a form of v-bind  -->
+    <TestingChild :first-name="firstName" :last-name="lastName" />
   </div>
 </template>
 

@@ -1,15 +1,32 @@
 <template>
   <div>
+    <!-- How component takes in props from parent -->
     <p>{{ fullName }}</p>
-    <button :class="{isNotShown: !show, isShown: show}" @click="showHide">Click me to show/hide</button>
+    <br/>
+
+    <!-- Directives -->
+    <!-- Different kind of v-bind are shown progressively-->
+    
+    <!-- v-bind:class, v-on (for click, @click) -->
+    <button :class="{isNotShown: !show, isShown: show}" @click="showHide">Click me to show/hide (v-show)</button>
+    <br/>
     <p v-show="show">Shown</p>
-    <p>
-      <button :style="sampleStyle3" @click="changeBlock">Click me to change block</button>
-    </p>
+    <br/>
+
+    <!-- v-bind:style, v-on (for click, @click) -->
+    <button :style="sampleStyle" @click="changeBlock">Click me to change condition (v-if, v-else-if, v-else)</button>
+    <br/>
+
+    <!-- v-if v-else-if v-else -->
     <p v-if="ifElseDemo === 1">I am 1</p>
     <p v-else-if="ifElseDemo === 2">I am 2</p>
     <p v-else>I am 3</p>
-    <p v-for="color in colorsArr" :key="color" :style="{backgroundColor: color}">XXX</p>
+    <br/>
+
+    <!-- v-for, used  in list rendering -->
+    <!-- each list must have assigned key in the form of v-bind:key, if not will throw error -->
+    <p>Example of v-for</p>
+    <p v-for="color in colorsArr" :key="color" :style="{backgroundColor: color}">{{ color }}</p>
   </div>
 </template>
 
@@ -31,9 +48,7 @@ export default {
       show: true,
       ifElseDemo: 1,
       colorsArr: ['red', 'blue', 'lightgreen', 'grey'],
-      sampleStyle1: {"background-color": 'red'},
-      sampleStyle2: {"background-color": 'cyan'},
-      sampleStyle3: {"background-color": 'silver'},
+      sampleStyle: {"background-color": 'red', 'color': 'white'},
     }
   },
   computed: {
